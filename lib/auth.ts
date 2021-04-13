@@ -221,10 +221,7 @@ export class Auth {
   }
 }
 
-export function createLongLivedTokenAuth(
-  oppUrl: string,
-  access_token: string
-) {
+export function createLongLivedTokenAuth(oppUrl: string, access_token: string) {
   return new Auth({
     oppUrl,
     clientId: null,

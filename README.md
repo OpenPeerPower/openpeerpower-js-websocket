@@ -63,14 +63,14 @@ You can pass options using the syntax:
 getAuth({ oppUrl: "http://localhost:8123" });
 ```
 
-| Option      | Description                                                                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| oppUrl     | The url where the Open Peer Power instance can be reached. This option is needed so we know where to redirect the user for authentication. Once redirected back, it is not needed to pass this option in. |
+| Option      | Description                                                                                                                                                                                               |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| oppUrl      | The url where the Open Peer Power instance can be reached. This option is needed so we know where to redirect the user for authentication. Once redirected back, it is not needed to pass this option in. |
 | clientId    | Client ID to use. Client IDs for Open Peer Power is the url of your application. Defaults to domain of current page. Pass `null` if you are making requests on behalf of a system user.                   |
-| redirectUrl | The url to redirect back to when the user has logged in. Defaults to current page.                                                                                                                       |
-| saveTokens  | Function to store an object containing the token information.                                                                                                                                            |
-| loadTokens  | Function that returns a promise that resolves to previously stored token information object or undefined if no info available.                                                                           |
-| authCode    | If you have an auth code received via other means, you can pass it in and it will be used to fetch tokens instead of going through the OAuth2 flow.                                                      |
+| redirectUrl | The url to redirect back to when the user has logged in. Defaults to current page.                                                                                                                        |
+| saveTokens  | Function to store an object containing the token information.                                                                                                                                             |
+| loadTokens  | Function that returns a promise that resolves to previously stored token information object or undefined if no info available.                                                                            |
+| authCode    | If you have an auth code received via other means, you can pass it in and it will be used to fetch tokens instead of going through the OAuth2 flow.                                                       |
 
 In certain instances `getAuth` will raise an error. These errors can be imported from the package:
 
@@ -85,12 +85,12 @@ import {
 HAWS.ERR_OPP_HOST_REQUIRED;
 ```
 
-| Error                       | Description                                                                                                                                                                                                                                                                                                                                             |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ERR_OPP_HOST_REQUIRED`    | You need to pass in `oppUrl` to `getAuth` to continue getting auth. This option is not needed when the user is redirected back after successfully logging in.                                                                                                                                                                                          |
-| `ERR_INVALID_AUTH`          | This error will be raised if the url contains an authorization code that is no longer valid.                                                                                                                                                                                                                                                            |
+| Error                       | Description                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ERR_OPP_HOST_REQUIRED`     | You need to pass in `oppUrl` to `getAuth` to continue getting auth. This option is not needed when the user is redirected back after successfully logging in.                                                                                                                                                                                            |
+| `ERR_INVALID_AUTH`          | This error will be raised if the url contains an authorization code that is no longer valid.                                                                                                                                                                                                                                                             |
 | `ERR_INVALID_HTTPS_TO_HTTP` | This error is raised if your code is being run from a secure context (hosted via https) and you're trying to fetch tokens from a Open Peer Power instance via a non secure context (http). This is called [mixed active content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content#Mixed_active_content) and the browser forbids this. |
-| Other errors                | Unknown error!                                                                                                                                                                                                                                                                                                                                          |
+| Other errors                | Unknown error!                                                                                                                                                                                                                                                                                                                                           |
 
 ### `createConnection()`
 
@@ -400,7 +400,7 @@ Makes a request to the server to revoke the refresh and all related access token
 | ERR_CANNOT_CONNECT        | 1            |
 | ERR_INVALID_AUTH          | 2            |
 | ERR_CONNECTION_LOST       | 3            |
-| ERR_OPP_HOST_REQUIRED    | 4            |
+| ERR_OPP_HOST_REQUIRED     | 4            |
 | ERR_INVALID_HTTPS_TO_HTTP | 5            |
 
 ## Other methods

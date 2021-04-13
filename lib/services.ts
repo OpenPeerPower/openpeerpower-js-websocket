@@ -33,10 +33,7 @@ function processServiceRegistered(
   return { [domain]: domainInfo };
 }
 
-function processServiceRemoved(
-  state: OppServices,
-  event: ServiceRemovedEvent
-) {
+function processServiceRemoved(state: OppServices, event: ServiceRemovedEvent) {
   if (state === undefined) return null;
 
   const { domain, service } = event.data;
