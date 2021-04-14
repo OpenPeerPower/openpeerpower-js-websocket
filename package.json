@@ -2,7 +2,7 @@
   "name": "openpeerpower-js-websocket",
   "type": "module",
   "sideEffects": false,
-  "version": "5.9.0",
+  "version": "1.0.0",
   "description": "Open Peer Power websocket client",
   "source": "lib/index.ts",
   "types": "dist/index.d.ts",
