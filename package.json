@@ -36,7 +36,7 @@
     "@types/mocha": "^8.0.0",
     "assert": "^2.0.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^13.0.2",
     "mocha": "^8.0.1",
     "prettier": "2.2.1",
     "reify": "^0.20.12",
